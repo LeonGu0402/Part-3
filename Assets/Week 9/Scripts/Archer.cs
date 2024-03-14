@@ -20,4 +20,9 @@ public class Archer : Villager
     {
         Instantiate(arrowPrefabs, spawnPoint.position, spawnPoint.rotation);
     }
+
+    public override ChestType CanOpen()
+    {
+        return ChestType.Archer;
+    }
 }
