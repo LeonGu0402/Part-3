@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 public class Villager : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -70,7 +71,7 @@ public class Villager : MonoBehaviour
     protected virtual void Update()
     {
         //left click: move to the click location
-        if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf)
+        if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf && !EventSystem.current.IsPointerOverGameObject())
         {
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }

@@ -13,6 +13,8 @@ public class CharacterControl : MonoBehaviour
     public List<Villager> list;
     public TMP_Dropdown dropdown;
 
+    int selectedNum;
+
     private void Start()
     {
         Instance = this;
@@ -41,5 +43,11 @@ public class CharacterControl : MonoBehaviour
     {
         CharacterControl.SetSelectedVillager(list[value]);
         Debug.Log(dropdown.options[value].text);
+        selectedNum = value;
+    }
+
+    public void CharacterScale(Single value)
+    {
+        list[selectedNum].transform.localScale = new Vector3(value, value, value);
     }
 }
