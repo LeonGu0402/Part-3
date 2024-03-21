@@ -1,42 +1,33 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
+    public TMPro.TextMeshProUGUI currentSelection;
+    public static CharacterControl Instance;
+    private void Start()
+    {
+        Instance = this;
+    }
     public static Villager SelectedVillager { get; private set; }
-    public TMP_Text classUI;
-
     public static void SetSelectedVillager(Villager villager)
     {
-
         if(SelectedVillager != null)
         {
             SelectedVillager.Selected(false);
         }
         SelectedVillager = villager;
-        
-        SelectedVillager.Selected(true); 
+        SelectedVillager.Selected(true);
+        Instance.currentSelection.text = villager.ToString();
     }
 
-    private void Update()
-    {
-        classIndicator();
-    }
-
-    void classIndicator()
-    {
-        if (SelectedVillager == null)
-        {
-            classUI.text = "Villager";
-        }
-
-        if (SelectedVillager != null)
-        {
-            classUI.text = SelectedVillager.GetType().Name;
-        }
-    }
-    
+    //private void Update()
+    //{
+    //    if(SelectedVillager != null)
+    //    {
+    //        currentSelection.text = SelectedVillager.GetType().ToString();
+    //   }
+    //}
 }

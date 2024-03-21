@@ -8,6 +8,4 @@ public class Merchant : Villager
     {
         return ChestType.Merchant;
     }
-
-
 }
