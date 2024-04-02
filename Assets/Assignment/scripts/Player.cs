@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class Player : tankBehaviour
 {   //child class of tankBehaviour
-    public Transform fireSpwanpoint;
-    public GameObject missile;
+    
     Boolean fireCooldown = false;
 
     //player have unqiue control, so overrides it

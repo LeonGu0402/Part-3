@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class tankBehaviour : MonoBehaviour
 {   //parents class for every tank
-    public float tankSpeed = 3f;
+    public float tankSpeed = 2f;
+    public GameObject missile;
+    public Transform fireSpwanpoint;
     public GameObject explosionImage;
     Boolean move = true;
 

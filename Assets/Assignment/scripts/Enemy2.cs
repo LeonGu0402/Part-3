@@ -10,7 +10,7 @@ public class Enemy2 : tankBehaviour
     //override to make it slow
     protected override void movement()
     {
-        tankSpeed = 2f;
+        tankSpeed = 1f;
         base.movement();
     }
 
