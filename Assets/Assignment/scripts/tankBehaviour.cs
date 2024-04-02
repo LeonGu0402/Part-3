@@ -9,24 +9,16 @@ public class tankBehaviour : MonoBehaviour
     public GameObject explosionImage;
     Boolean move = true;
 
-    
-
-    private void Start()
-    {
-        
-    }
-
     protected void FixedUpdate()
     {
         if (move)
         {
             movement();
         }
-
-        
-        
+ 
     }
 
+    //every tank default moveing partten
     protected virtual void movement()
     {
         transform.Translate(Vector3.right * tankSpeed * Time.deltaTime);
@@ -40,6 +32,7 @@ public class tankBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //missile send message to hit, hit funtion calls explosion
     protected void hit()
     {
         StartCoroutine(explosion());

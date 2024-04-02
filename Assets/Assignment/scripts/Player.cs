@@ -5,11 +5,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : tankBehaviour
-{
+{   //child class of tankBehaviour
     public Transform fireSpwanpoint;
     public GameObject missile;
     Boolean fireCooldown = false;
 
+    //player have unqiue control, so overrides it
     protected override void movement()
     {
         if (Input.GetKey(KeyCode.W))
@@ -31,6 +32,7 @@ public class Player : tankBehaviour
         
     }
 
+    //use two coroutine to create fire missile fuction and fire cooldown counter
     IEnumerator fire()
     {
         if (Input.GetKeyDown(KeyCode.Space))

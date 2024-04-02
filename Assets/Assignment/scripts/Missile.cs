@@ -27,6 +27,7 @@ public class Missile : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //send message to interacts with all tank
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.SendMessage("hit", SendMessageOptions.DontRequireReceiver);
