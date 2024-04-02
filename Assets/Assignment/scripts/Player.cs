@@ -25,7 +25,7 @@ public class Player : tankBehaviour
 
     private void Update()
     {
-        if (!fireCooldown)
+        if (!fireCooldown && Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(fire());
         }
@@ -35,14 +35,10 @@ public class Player : tankBehaviour
     //use two coroutine to create fire missile fuction and fire cooldown counter
     IEnumerator fire()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(missile, fireSpwanpoint.position, fireSpwanpoint.rotation);
-            fireCooldown = true;
-            yield return new WaitForSeconds(1);
-            StartCoroutine(coolDown());
-
-        }
+        Instantiate(missile, fireSpwanpoint.position, fireSpwanpoint.rotation);
+        fireCooldown = true;
+        yield return new WaitForSeconds(1);
+        StartCoroutine(coolDown());
     }
 
     IEnumerator coolDown()
