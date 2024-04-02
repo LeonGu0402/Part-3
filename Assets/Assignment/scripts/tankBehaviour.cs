@@ -21,14 +21,14 @@ public class tankBehaviour : MonoBehaviour
     //every tank default moveing partten
     protected virtual void movement()
     {
-        transform.Translate(Vector3.right * tankSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * tankSpeed * Time.deltaTime);
     }
 
-    protected virtual IEnumerator explosion()
+    protected IEnumerator explosion()
     {
         move = false;
         Instantiate(explosionImage, gameObject.transform);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 
