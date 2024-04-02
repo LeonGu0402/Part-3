@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class tankBehaviour : MonoBehaviour
 {   //parents class for every tank
-    public float tankSpeed = 5f;
+    public float tankSpeed = 3f;
     public GameObject explosionImage;
     Boolean move = true;
 
@@ -33,7 +33,7 @@ public class tankBehaviour : MonoBehaviour
     }
 
     //missile send message to hit, hit funtion calls explosion
-    protected void hit()
+    protected virtual void hit()
     {
         StartCoroutine(explosion());
     }
