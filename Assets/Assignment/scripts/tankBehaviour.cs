@@ -7,9 +7,15 @@ public class tankBehaviour : MonoBehaviour
 {   //parents class for every tank
     public float tankSpeed = 2f;
     public GameObject missile;
+    //public GameObject enemySpawner;
     public Transform fireSpwanpoint;
     public GameObject explosionImage;
     Boolean move = true;
+
+    private void Start()
+    {
+
+    }
 
     protected void FixedUpdate()
     {
@@ -30,6 +36,7 @@ public class tankBehaviour : MonoBehaviour
     {
         move = false;
         Instantiate(explosionImage, gameObject.transform);
+        GameObject.Find("The Big Other").SendMessage("tankKill");
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
@@ -39,4 +46,5 @@ public class tankBehaviour : MonoBehaviour
     {
         StartCoroutine(explosion());
     }
+
 }

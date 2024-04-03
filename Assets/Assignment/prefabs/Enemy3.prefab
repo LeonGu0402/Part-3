@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f4923d8672d0d14399efba2b8800d77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -205,5 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankSpeed: 3
   missile: {fileID: 387183522154658346, guid: d520a9f666679264e86633b2209a0a54, type: 3}
+  enemySpawner: {fileID: 2920973187324130443, guid: 0399d0729b7ce654bae04a6deacfe833, type: 3}
   fireSpwanpoint: {fileID: 4187761082230329441}
   explosionImage: {fileID: 5413352492071829431, guid: 111cb3f4e4244d54cbbde159a1d49c32, type: 3}
