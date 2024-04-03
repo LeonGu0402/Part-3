@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 7773326404762124091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -1.843, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -205,6 +205,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankSpeed: 3
   missile: {fileID: 387183522154658346, guid: d520a9f666679264e86633b2209a0a54, type: 3}
-  enemySpawner: {fileID: 2920973187324130443, guid: 0399d0729b7ce654bae04a6deacfe833, type: 3}
   fireSpwanpoint: {fileID: 4187761082230329441}
   explosionImage: {fileID: 5413352492071829431, guid: 111cb3f4e4244d54cbbde159a1d49c32, type: 3}

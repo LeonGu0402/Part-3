@@ -28,7 +28,11 @@ public class enemySpawner : MonoBehaviour
 
     public void tankKill()
     {
-        tankCount -= 1;
+        if(tankCount > 0)
+        {
+            tankCount -= 1;
+        }
+        
     }
 
 }
